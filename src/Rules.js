@@ -62,8 +62,7 @@ class SumDistro extends Rule {
 
 class FullHouse extends Rule {
   evalRoll(dice) {
-    console.log(this.freq([1, 1, 1, 2, 2]))
-    if (this.freq(dice) === [3,2] || this.freq(dice) === [2,3]){
+    if (this.freq(dice).includes(2) && this.freq(dice).includes(3)){
       return this.score;
     }
   return 0;
